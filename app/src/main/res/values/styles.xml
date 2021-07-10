@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="btn_color_stile" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/royal_blue</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="btn_color_stile_advanced" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@android:color/holo_red_light</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="resultframe_frame_standard" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/frame_for_texts</item>
+    </style>
+
+    <style name="resultframe_frame_advanced" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/frame_for_texts_advanced</item>
+    </style>
+
+    <style name="btn_main_style">
+        <item name="android:textSize">@dimen/text_main_size</item>
+        <item name="android:layout_marginEnd">@dimen/buttons_left_margin</item>
+    </style>
+
+    <style name="btn_main_style_last_btn">
+        <item name="android:textSize">@dimen/text_main_size</item>
+    </style>
+
+    <style name="btn_main_style_landscape">
+        <item name="android:textSize">@dimen/text_main_size_landscape</item>
+        <item name="android:layout_marginEnd">@dimen/buttons_left_margin</item>
+    </style>
+
+    <style name="btn_main_style_landscape_last_btn">
+        <item name="android:textSize">@dimen/text_main_size_landscape</item>
+    </style>
+
+
+    <dimen name="buttons_left_margin">8dp</dimen>
+</resources>

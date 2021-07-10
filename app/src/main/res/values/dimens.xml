@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="frame_top_margin">290dp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="standard_padding">8dp</dimen>
+    <dimen name="text_main_size">32sp</dimen>
+    <dimen name="_0dp">0dp</dimen>
+    <dimen name="first_button_raw_margin">32dp</dimen>
+    <dimen name="frame_top_margin_landscape">16dp</dimen>
+    <dimen name="first_button_raw_margin_landscape">16dp</dimen>
+    <dimen name="text_main_size_landscape">20sp</dimen>
+    <dimen name="standard_start_margin">72dp</dimen>
+</resources>

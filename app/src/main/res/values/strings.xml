@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Just Simple Calculator</string>
+    <string name="default_result_text">0.0</string>
+    <string name="btn1_text">1</string>
+    <string name="btn2_text">2</string>
+    <string name="btn3_text">3</string>
+    <string name="btn4_text">4</string>
+    <string name="btn_divide_text">/</string>
+    <string name="btn5_text">5</string>
+    <string name="btn6_text">6</string>
+    <string name="btn_multiply_text">*</string>
+    <string name="btn7_text">7</string>
+    <string name="btn8_text">8</string>
+    <string name="btn9_text">9</string>
+    <string name="btn_subtract_text">-</string>
+    <string name="btn0_text">0</string>
+    <string name="btn_dot_text">.</string>
+    <string name="btn_add_text">+</string>
+    <string name="btn_reset_text">AC</string>
+    <string name="btn_backspace_text">⌫</string>
+    <string name="btn_percent_text">%</string>
+    <string name="btn_equals_text">=</string>
+    <string name="btn_positive_negative_text">+/-</string>
+    <string name="_menu_item_themes_title">Themes</string>
+    <string name="light_theme_radio_title">Светлая тема</string>
+    <string name="dark_theme_radio_title">Тёмная тема</string>
+    <string name="advanced_theme_radio_title">Альтернативная тема</string>
+    <string name="settings_hint_text">Выберите одну из нижепредложенных тем и нажмите на кнопку подверждения</string>
+    <string name="confirm_btn_text">Подтвердить</string>
+</resources>
