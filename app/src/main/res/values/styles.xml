@@ -20,23 +20,26 @@
     </style>
 
     <style name="btn_main_style">
-        <item name="android:textSize">@dimen/text_main_size</item>
+        <item name="android:textSize">@dimen/middle_font_size</item>
         <item name="android:layout_marginEnd">@dimen/buttons_left_margin</item>
     </style>
 
     <style name="btn_main_style_last_btn">
-        <item name="android:textSize">@dimen/text_main_size</item>
+        <item name="android:textSize">@dimen/middle_font_size</item>
     </style>
 
     <style name="btn_main_style_landscape">
-        <item name="android:textSize">@dimen/text_main_size_landscape</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">@dimen/middle_font_size</item>
         <item name="android:layout_marginEnd">@dimen/buttons_left_margin</item>
     </style>
 
     <style name="btn_main_style_landscape_last_btn">
-        <item name="android:textSize">@dimen/text_main_size_landscape</item>
+        <item name="android:layout_height">@dimen/btn_height_landscape</item>
+        <item name="android:textSize">@dimen/middle_font_size</item>
     </style>
 
-
-    <dimen name="buttons_left_margin">8dp</dimen>
+    <style name="window_title_style" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
 </resources>

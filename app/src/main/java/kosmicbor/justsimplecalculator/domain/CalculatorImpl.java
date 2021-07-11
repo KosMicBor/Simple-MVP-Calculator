@@ -1,5 +1,6 @@
 package kosmicbor.justsimplecalculator.domain;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -31,20 +32,21 @@ public class CalculatorImpl implements Calculator, Parcelable {
 
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public String calculateResult(Double argOne, Double argTwo, Operations operation) {
         if (operation.equals(Operations.ADD)) {
             result = argOne + (argTwo);
-            return result.toString();
+            return String.format("%.2f", result);
         } else if (operation.equals(Operations.SUB)) {
             result = argOne - (argTwo);
-            return result.toString();
+            return String.format("%.2f", result);
         } else if (operation.equals(Operations.DIVIDE)) {
             result = argOne / argTwo;
-            return result.toString();
+            return String.format("%.2f", result);
         } else if (operation.equals(Operations.MULTIPLY)) {
             result = argOne * argTwo;
-            return result.toString();
+            return String.format("%.2f", result);
         } else {
             return "0.0";
         }

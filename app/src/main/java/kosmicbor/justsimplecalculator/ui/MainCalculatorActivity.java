@@ -7,6 +7,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -60,6 +61,8 @@ public class MainCalculatorActivity extends AppCompatActivity implements Calcula
             presenter.setView(this);
         }
 
+        resultFrame.setBackgroundResource(storage.getFrameRes());
+
         for (int elem : buttonsIdList) {
             Button currentButton = findViewById(elem);
             currentButton.setOnClickListener(v -> {
@@ -91,7 +94,6 @@ public class MainCalculatorActivity extends AppCompatActivity implements Calcula
     }
 
     @Override
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public void drawResult(String result) {
         resultFrame.setText(result);
     }

@@ -2,9 +2,15 @@ package kosmicbor.justsimplecalculator.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.LightingColorFilter;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -18,8 +24,9 @@ import kosmicbor.justsimplecalculator.domain.ThemeStorage;
 
 public class ThemesSettingsActivity extends AppCompatActivity {
 
-    private ThemeStorage storage;
     private static final String THEME_KEY = "THEME_KEY";
+
+    private ThemeStorage storage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +43,11 @@ public class ThemesSettingsActivity extends AppCompatActivity {
         themeSelector.setOnCheckedChangeListener((group, checkedId) -> {
 
             if (checkedId == R.id.light_theme_radio_btn) {
-                storage.setCurrentTheme(Theme.OPTION_LIGHT);
+                storage.setCurrentTheme(Theme.OPTION_LIGHT, R.drawable.frame_for_texts);
             } else if (checkedId == R.id.dark_theme_radio_btn) {
-                storage.setCurrentTheme(Theme.OPTION_DARK);
+                storage.setCurrentTheme(Theme.OPTION_DARK, R.drawable.frame_for_texts);
             } else if (checkedId == R.id.advanced_theme_radio_btn) {
-                storage.setCurrentTheme(Theme.OPTION_ADVANCED);
+                storage.setCurrentTheme(Theme.OPTION_ADVANCED, R.drawable.frame_for_texts_advanced);
             }
         });
 

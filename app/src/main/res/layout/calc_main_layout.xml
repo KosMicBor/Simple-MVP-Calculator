@@ -2,14 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/container_bottom_padding">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/result_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/frame_top_margin"
+        android:background="@drawable/frame_for_texts"
         android:layout_marginEnd="@dimen/standard_margin"
         android:padding="@dimen/standard_padding"
         android:text="@string/default_result_text"
@@ -18,8 +19,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_reset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_reset"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/first_button_raw_margin"
         android:text="@string/btn_reset_text"
-        app:layout_constraintBottom_toTopOf="@id/btn_1"
+
         app:layout_constraintEnd_toStartOf="@id/btn_positive_negative"
         app:layout_constraintStart_toStartOf="@id/result_field"
         app:layout_constraintTop_toBottomOf="@id/result_field" />
@@ -187,9 +187,10 @@
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn0_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/btn_8"
-        app:layout_constraintStart_toStartOf="@id/btn_7"
         app:layout_constraintEnd_toStartOf="@id/btn_dot"
+        app:layout_constraintStart_toStartOf="@id/btn_7"
         app:layout_constraintTop_toBottomOf="@id/btn_7" />
 
     <com.google.android.material.button.MaterialButton
@@ -198,6 +199,7 @@
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:text="@string/btn_dot_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_equals"
         app:layout_constraintStart_toStartOf="@id/btn_9"
         app:layout_constraintTop_toBottomOf="@id/btn_9" />
@@ -219,6 +221,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="@string/btn_equals_text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/btn_add"
         app:layout_constraintStart_toEndOf="@id/btn_dot"
         app:layout_constraintTop_toBottomOf="@id/btn_add" />

@@ -10,4 +10,8 @@
     <dimen name="first_button_raw_margin_landscape">16dp</dimen>
     <dimen name="text_main_size_landscape">20sp</dimen>
     <dimen name="standard_start_margin">72dp</dimen>
+    <dimen name="container_bottom_padding">16dp</dimen>
+    <dimen name="buttons_left_margin">8dp</dimen>
+    <dimen name="middle_font_size">16dp</dimen>
+    <dimen name="btn_height_landscape">40dp</dimen>
 </resources>

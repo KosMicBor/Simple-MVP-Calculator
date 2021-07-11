@@ -1,5 +1,6 @@
 package kosmicbor.justsimplecalculator.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -13,7 +14,7 @@ import kosmicbor.justsimplecalculator.domain.Operations;
 
 public class CalculatorPresenter implements Parcelable {
 
-    private final int ONE_VALUE = 1;
+    private static final int ONE_VALUE = 1;
 
     private Calculator calculator;
     private CalculatorView view;
@@ -76,11 +77,10 @@ public class CalculatorPresenter implements Parcelable {
                 resultList.clear();
                 resultList.add("-");
                 resultList.addAll(oldResultList);
-                view.drawResult(getStringOfArray(resultList));
             } else {
                 resultList.remove(0);
-                view.drawResult(getStringOfArray(resultList));
             }
+            view.drawResult(getStringOfArray(resultList));
         }
     }
 
@@ -123,10 +123,11 @@ public class CalculatorPresenter implements Parcelable {
     }
 
 
+    @SuppressLint("DefaultLocale")
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void percentButtonClicked() {
         if (!resultList.isEmpty()) {
-            result = String.valueOf(calculator.calculatePercent(arg1,
+            result = String.format("%.2f", calculator.calculatePercent(arg1,
                     Double.parseDouble(getStringOfArray(resultList)), operation));
             view.drawResult(result);
             resultList.clear();
