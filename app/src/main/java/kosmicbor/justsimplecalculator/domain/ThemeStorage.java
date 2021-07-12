@@ -15,6 +15,10 @@ public class ThemeStorage {
         sharedPreferences = context.getSharedPreferences("ThemePreferences", Context.MODE_PRIVATE);
     }
 
+    /**
+     * get current theme from sharedPreferences
+     * @return
+     */
     public Theme getCurrentTheme() {
         String key = sharedPreferences.getString(SHARED_KEY, Theme.OPTION_LIGHT.getThemeKey());
 
@@ -28,11 +32,15 @@ public class ThemeStorage {
 
     }
 
+    /**
+     * This method sets current theme. It puts value to sharedPreferences
+     * @param theme Enum's Theme class instance
+     * @param currentFrameRes resource id for result TextView's background frame
+     */
     public void setCurrentTheme(Theme theme, int currentFrameRes) {
         sharedPreferences.edit().putString(SHARED_KEY, theme.getThemeKey()).apply();
         sharedPreferences.edit().putInt(FRAME_KEY, currentFrameRes).apply();
     }
-
 
     public int getFrameRes() {
         return sharedPreferences.getInt(FRAME_KEY, R.drawable.frame_for_texts);

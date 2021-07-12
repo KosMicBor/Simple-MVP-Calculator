@@ -1,13 +1,11 @@
 package kosmicbor.justsimplecalculator.ui;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,7 +16,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.zip.Inflater;
 
 import kosmicbor.justsimplecalculator.R;
 import kosmicbor.justsimplecalculator.domain.CalculatorImpl;
@@ -87,12 +84,16 @@ public class MainCalculatorActivity extends AppCompatActivity implements Calcula
                     presenter.dotButtonClicked();
                 } else {
                     String currentNumber = String.valueOf(buttonsIdList.indexOf(elem));
-                    presenter.addNumberToList(currentNumber);
+                    presenter.drawNumberInFrame(currentNumber);
                 }
             });
         }
     }
 
+    /**
+     * draw the value in the main text frame
+     * @param result String value of input from buttons or from arithmetic operations
+     */
     @Override
     public void drawResult(String result) {
         resultFrame.setText(result);
