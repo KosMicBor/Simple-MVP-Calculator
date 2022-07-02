@@ -10,6 +10,7 @@ import androidx.annotation.RequiresApi;
 import java.util.ArrayList;
 
 import kosmicbor.justsimplecalculator.domain.Calculator;
+import kosmicbor.justsimplecalculator.domain.CalculatorImpl;
 import kosmicbor.justsimplecalculator.domain.Operations;
 
 public class CalculatorPresenter implements Parcelable {

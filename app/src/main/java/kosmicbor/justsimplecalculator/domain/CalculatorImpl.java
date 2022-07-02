@@ -1,8 +1,14 @@
 package kosmicbor.justsimplecalculator.domain;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.annotation.RequiresApi;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CalculatorImpl implements Calculator, Parcelable {
 
@@ -34,14 +40,20 @@ public class CalculatorImpl implements Calculator, Parcelable {
 
     /**
      * This method perform arithmetic operations
-     * @param argOne Double value appears as the first argument of arithmetic operations
-     * @param argTwo Double value appears as the second argument of arithmetic operations
+     *
+     * @param argOne    Double value appears as the first argument of arithmetic operations
+     * @param argTwo    Double value appears as the second argument of arithmetic operations
      * @param operation instance of Enum class contains arithmetic operations types
      * @return string result value of arithmetic operation
      */
     @SuppressLint("DefaultLocale")
     @Override
     public String calculateResult(Double argOne, Double argTwo, Operations operation) {
+
+        if (argOne == null || argTwo == null || operation == null) {
+            return "0.0";
+        }
+
         if (operation.equals(Operations.ADD)) {
             result = argOne + (argTwo);
             return String.format("%.2f", result);
@@ -61,8 +73,9 @@ public class CalculatorImpl implements Calculator, Parcelable {
 
     /**
      * This method perform percent calculation
-     * @param value number which from percent takes (first argument of operation)
-     * @param percent percent value which takes from value
+     *
+     * @param value     number which from percent takes (first argument of operation)
+     * @param percent   percent value which takes from value
      * @param operation instance of Enum class contains arithmetic operations types
      * @return double result value of percent operation
      */
@@ -101,6 +114,9 @@ public class CalculatorImpl implements Calculator, Parcelable {
                 return value * ((-value / 100) * percent);
             }
 
+        } else if (operation == null) {
+            return 0d;
+
         } else {
             return 0d;
         }
@@ -119,5 +135,18 @@ public class CalculatorImpl implements Calculator, Parcelable {
             dest.writeByte((byte) 1);
             dest.writeDouble(result);
         }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public int[] increaseListValuesByNumber(int[] list, int number) {
+
+        for (int i = 0; i < list.length; i++) {
+            list[i] = list[i] + number;
+            System.out.println(list[i]);
+        }
+
+
+
+        return list;
     }
 }
