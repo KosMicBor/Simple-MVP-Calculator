@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programming/AndroidApps/RepeatedCoursesApps/BeginingAndroidCourse/JustSimpleCalculator/app/src/main/res/layout/activity_settings_layout.xml" value="0.33177083333333335" />
+        <entry key="..\:/Programming/AndroidApps/RepeatedCoursesApps/BeginingAndroidCourse/JustSimpleCalculator/app/src/main/res/layout/calc_main_layout.xml" value="0.18568840579710144" />
+        <entry key="..\:/Programming/AndroidApps/RepeatedCoursesApps/BeginingAndroidCourse/JustSimpleCalculator/app/src/main/res/layout/themes_settings.xml" value="0.20244565217391305" />
+        <entry key="..\:/Programming/AndroidApps/RepeatedCoursesApps/BeginingAndroidCourse/JustSimpleCalculator/app/src/main/res/menu/menu_main.xml" value="0.33177083333333335" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
